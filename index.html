@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css" type="text/css">
+
     <script type="text/javascript" src="js/main.js"></script>
 
     <title>Calculadora</title>
@@ -13,25 +14,50 @@
 <body>
 
     <section>
-        <div class="sec-box">
+        <div class="form-box">
             <div class="form-calc">
                 <form>
                     <h2>Calculadora Básica</h2>
 
                     <div class="input-box">
+                        <input type="text" id="num1" required>
                         <label>Número 1</label>
-                        <input type="text" required>
                     </div><!--input-box-->
                     
                     <div class="input-box">
+                        <input type="text" id="num2" required>
                         <label>Número 2</label> 
+                    </div><!--input-box-->
 
-                    </div><!--input box-->
+                    <div class="op-box">
+                        <button type="button" id="btnNada" onclick="mostrarOperacao()">Selecione a operação</button>
+                        <button type="button" id="btnSomar" onclick="somar()">Somar</button>
+                        <button type="button" id="btnSubtrair" onclick="subtrair()">Subtrair</button>
+                        <button type="button" id="btnMultiplicar" onclick="multiplicar()">Multiplicar</button>
+                        <button type="button" id="btnDividir" onclick="dividir()">Dividir</button>
+                        
+                        <ion-icon name="chevron-down-outline" onclick="mostrarOperacao()"></ion-icon>
+                        <ion-icon name="trash-bin-outline" id="trash-icon" onclick="limpar()"></ion-icon>
 
+                        <ul id="listaOp">
+                            <li id="liSomar" onclick="selecionarOperacao('Somar')">Somar</li>
+                            <li id="liSubtrair" onclick="selecionarOperacao('Subtrair')">Subtrair</li>
+                            <li id="liMultiplicar" onclick="selecionarOperacao('Multiplicar')">Multiplicar</li>
+                            <li id="liDividir" onclick="selecionarOperacao('Dividir')">Dividir</li>
+                        </ul>
+                    </div><!--op-box-->
+
+                    <div class="resp-box">
+                        <h2>Resultado</h2>
+                        <input type="text" id="resp" readonly>
+                    </div><!--resp-box-->
                 </form>
             </div><!--form-calc-->
-        </div><!--sec-box-->
+        </div><!--form-box-->
     </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
