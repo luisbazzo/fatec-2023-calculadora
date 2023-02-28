@@ -4,79 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css" type="text/css">
+    <script type="text/javascript" src="js/main.js"></script>
+
     <title>Calculadora</title>
-
-    <style type="text/css" media="screen">
-
-        *{
-            box-sizing: border-box;
-        }
-
-        body{
-            background-color: black;
-        }
-
-        .main{
-            width: 100%;
-            height: 120px;
-            display: inline-block;
-        }
-      
-        .main h1{
-            color: white;
-            display: inline-block;
-            text-align: center;
-            font-family: sans-serif;
-        }
-
-    </style>
 
 </head>
 <body>
-    <header class="main">
-        <h1>Calculadora Básica</h1>
-    </header><!--main-->
-    
-    <div class="container">
-        <form class="calc-form">
 
-            <input type="text" id="num1">
-            +
-            <input type="text" id="num2">
+    <section>
+        <div class="sec-box">
+            <div class="form-calc">
+                <form>
+                    <h2>Calculadora Básica</h2>
 
-            <button type="button" id="btnClick" onclick="somar()"> Somar </button>
-            <input type="text" id="resp" readonly>
+                    <div class="input-box">
+                        <label>Número 1</label>
+                        <input type="text" required>
+                    </div><!--input-box-->
+                    
+                    <div class="input-box">
+                        <label>Número 2</label> 
 
-            <button type="button" id="btnLimpar" onclick="limpar()">Limpar</button>
+                    </div><!--input box-->
 
-        </form><!--calc-form-->
-    </div><!--container-->
-
-    <script>
-        function somar(){
-            
-            var num1, num2, resp;
-
-            num1 = parseFloat(document.getElementById("num1").value);
-            num2 = parseFloat(document.getElementById("num2").value);
-
-            resp = num1 + num2;
-
-            document.getElementById("resp").value = resp;
-
-            //alert("Soma realizada com sucesso!");
-        }
-
-        function limpar(){
-
-            document.getElementById("num1").value = "";
-            document.getElementById("num2").value = "";
-            document.getElementById("resp").value = "";
-        }
-        
-        //document.getElementById("btnClick").onclick = somar; 
-        //-> Outro método para linkar a função com o botão.
-    </script>
+                </form>
+            </div><!--form-calc-->
+        </div><!--sec-box-->
+    </section>
 
 </body>
 </html>
