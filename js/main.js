@@ -50,6 +50,19 @@ function dividir(){
 
 }
 
+function restodiv(){
+
+    var num1, num2, resp;
+
+    num1 = parseFloat(document.getElementById("num1").value);
+    num2 = parseFloat(document.getElementById("num2").value);
+
+    resp = num1 % num2;
+
+    document.getElementById("resp").value = resp;
+
+}
+
 function mostrarOperacao(){
 
     document.getElementById("listaOp").style.display = "block";
@@ -59,6 +72,8 @@ function mostrarOperacao(){
     document.getElementById("btnSomar").style.display = "none";
     document.getElementById("btnSubtrair").style.display = "none";
     document.getElementById("btnMultiplicar").style.display = "none";
+    document.getElementById("btnDividir").style.display = "none";
+    document.getElementById("btnRestoDiv").style.display = "none";
 
 }
 
@@ -75,8 +90,11 @@ function selecionarOperacao(op){
     else if(op == "Multiplicar"){
         document.getElementById("btnMultiplicar").style.display = "inline-block";
     }
-    else{
+    else if(op == "Divisao"){
         document.getElementById("btnDividir").style.display = "inline-block";
+    }
+    else{
+        document.getElementById("btnRestoDiv").style.display = "inline-block";
     }
 
     document.getElementById("listaOp").style.display = "none";
@@ -94,5 +112,6 @@ function limpar(){
     document.getElementById("btnSubtrair").style.display = "none";
     document.getElementById("btnMultiplicar").style.display = "none";
     document.getElementById("btnDividir").style.display = "none";
+    document.getElementById("btnRestoDiv").style.display = "none";
     document.getElementById("btnNada").style.borderRadius = "40px";
 }
