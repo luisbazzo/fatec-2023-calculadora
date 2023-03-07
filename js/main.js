@@ -90,7 +90,7 @@ function selecionarOperacao(op){
     else if(op == "Multiplicar"){
         document.getElementById("btnMultiplicar").style.display = "inline-block";
     }
-    else if(op == "Divisao"){
+    else if(op == "Dividir"){
         document.getElementById("btnDividir").style.display = "inline-block";
     }
     else{
